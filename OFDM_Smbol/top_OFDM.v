@@ -10,7 +10,7 @@
 
 
 
-//BOBA lax
+
 
 module top_OFDM(
 	input clk, en, rst, ready_in,
