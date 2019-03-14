@@ -16,7 +16,7 @@ module top_OFDM(
 );
 
 wire signed [15:0] s1, s2;
-//nnnnnnnnn
+
 wire ready_in3, valid_qam, valid_pilot;
 wire index_pilot, sign_pilot, ready_out_pilots;
 	
