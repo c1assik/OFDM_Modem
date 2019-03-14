@@ -9,9 +9,6 @@
 // -----------------------------------------------------------------------------
 
 
-
-
-
 module top_OFDM(
 	input clk, en, rst, ready_in,
 	output signed [15:0] I_OFDM, Q_OFDM,
