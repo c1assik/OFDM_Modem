@@ -1,0 +1,56 @@
+
+
+
+/** The rom testbench */
+module build_rom_tb;
+
+parameter tck = 10; ///< clock tick
+parameter ADDR_WIDTH=11;
+/**inputs*/
+reg clk,enable, reset,ready_in;
+/**outputs*/
+wire [1:0] Bit_ROM;
+wire valid_rom, valid_count;
+
+/*----------------*/
+
+
+
+   wire [ADDR_WIDTH-1:0] addr1;
+   wire ready;
+
+/** The LFSR DUT instance */
+build_rom rom_inst(
+	clk, enable,reset,ready_in, Bit_ROM, valid_rom,valid_count
+);
+ 
+always #(tck/2) clk <= ~clk; // clocking device
+
+initial begin
+	$dumpfile("rom.vcd");
+	$dumpvars(0, build_rom_tb);
+	$monitor("%b", clk, enable,reset,ready_in, Bit_ROM, valid_rom,valid_count );
+end
+
+// testbench actions
+initial begin
+clk = 0; enable =0; reset = 0; ready_in=0;
+#50 enable =1;
+#10 ready_in= 1;
+
+#50 reset =1;
+#40 reset = 0;
+
+#5 reset =1;
+#5 reset = 0;
+
+
+
+end 
+
+initial 
+begin
+	#400 $finish;
+end
+
+endmodule
