@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package name="fft" version="2.1.3" dsp_builder="true" >
+<iptb core_dir="C:\EDA\MegaCore\fft-v2.1.3\lib\ip_toolbench" flow_dir="C:\EDA\MegaCore\fft-v2.1.3\lib\../../common/ip_toolbench/v1.2.7/bin" lib_dir="C:\EDA\MegaCore\fft-v2.1.3\lib\"/>
+</package>

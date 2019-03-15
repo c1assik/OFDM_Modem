@@ -1,0 +1,16 @@
+// Timeout specification                                                        
+timeout = 3600 sec;			// This is the hard device timeout-- required           
+soft_timeout = 0;			// This is THE optional soft timeout = 4*123              
+// OpenCore spec file authentication                                            
+entity = asj_fft_si_sose_so_b;                                                           
+core_name = 'FFT MegaCore v2.1.3';                                                          
+// Vendor specific messages                                                     
+message = 'The output signals fft_real_out, fft_imag_out and exponent_out are forced low when the evaluation time expires'; 
+                                                                                
+// Port definition                                                              
+               
+output fft_real_out = all'b0;	// Force low on all bits in the bus                   
+output fft_imag_out = all'b0;	// Force low on all bits in the bus                   
+output exponent_out = all'b0;	// Force low on all bits in the bus                   
+                                                                                
+ÿ

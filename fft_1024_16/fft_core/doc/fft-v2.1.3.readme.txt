@@ -1,0 +1,179 @@
+FFT MegaCore Function v2.1.3 Readme File
+
+This readme file for the FFT MegaCore(R) function includes
+information that was not incorporated into the FFT MegaCore
+Function User Guide v2.1.0.
+
+This file contains the following information:
+
+o  Package Contents
+o  Software Tool Requirements
+o  Release History
+o  Errata Fixed in this Release
+o  Contacting Altera
+
+
+Package Contents
+================
+FFT MegaCore Function v2.1.3
+FFT MegaCore Function User Guide v2.1.0
+
+
+Software Tool Requirements
+==========================
+This MegaCore function requires the following software:
+
+o  Quartus(R) II software version 5.0 or higher
+o  Adobe Acrobat Reader version 5.0 or higher, for viewing PDF documentation
+o  Netscape Navigator version 4.7 or higher on computers running a supported
+   version of the RedHat Linux or Solaris operating systems for following web
+   links or viewing this readme within IP Toolbench
+
+Release History
+===============
+Version 2.1.3
+-------------
+o Fixes errata found in FFT MegaCore function v2.1.2. See the section 
+  "Errata Fixed in this Release" below for details
+
+
+Version 2.1.2
+-------------
+o Fixes errata found in FFT MegaCore function v2.1.1. See the section 
+  "Errata Fixed in this Release" below for details
+
+
+Version 2.1.1
+-------------
+o Fixes errata found in FFT MegaCore function v2.1.0. See the section 
+  "Errata Fixed in this Release" below for details
+
+Version 2.1.0
+-------------
+o Support for Cyclone (TM) II  devices
+o Bit-Accurate MATLAB model support
+o DSP Builder Ready
+
+Version 2.0.0
+-------------
+o Support for Stratix (TM) II devices
+o Support for Windows, Solaris, and Linux operating systems
+o High throughput quad-output Radix 4 FFT engine
+o Support for multiple single-output and quad-output engines 
+  in parallel
+o Multiple I/O data flow modes: streaming, buffered burst, 
+  and burst modes
+o Atlantic™ compliant input and output interfaces
+o Parameterization-specific VHDL and Verilog HDL testbench generation
+o Transform direction (FFT/IFFT) specifiable on a per-block basis
+o Easy-to-use IP Toolbench interface
+o IP functional simulation models for use in Altera-supported 
+  VHDL and Verilog HDL simulators
+  
+Version 1.3.2
+-------------
+
+o Updates to tool support.
+
+Version 1.3.1
+-------------
+
+o Support for DSP Builder added.
+
+Version 1.3.0
+-------------
+
+o Added support for Stratix devices.
+o Optimized memory architecture.
+
+Version 1.2.0
+-------------
+
+o Improved output data resolution.
+
+Version 1.1.1
+-------------
+
+o Re-encrypted design files with the correct product ID.
+
+Version 1.1.0
+-------------
+
+o Added support for OpenCore® Plus hardware evaluation.
+
+Version 1.0.2
+-------------
+
+o JRE bundled with installer.
+
+Version 1.0.0
+-------------
+
+o Initial release  
+
+
+Errata Fixed in this Release
+============================
+This section lists the errata that have been fixed in this release. For more
+information on any of the errata, download the complete errata sheet from
+www.altera.com/literature//lit-es.jsp
+
+Version 2.1.2 Errata
+--------------------
+
+The following v2.1.2 errata have been fixed in the release:
+
+o FFT output block exponent value from single-output engine FFT MegaCore Function 
+  variations does not represent appropriate scaling factor
+
+
+Version 2.1.1 Errata
+--------------------
+
+The following v2.1.1 errata have been fixed in the release:
+
+o FFT output data is functionally incorrect due to input data-dependent 
+  internal overflow.
+
+
+Version 2.1.0 Errata
+--------------------
+
+The following v2.1.0 errata have been fixed in the release:
+
+o Errors in 64-pt streaming FFT output data
+o Matlab may crash after a number of successive calls to the FFT Matlab model
+
+
+Contacting Altera
+=================
+
+Although we have made every effort to ensure that this version of the FFT
+MegaCore function works correctly, there may be problems that we have not 
+encountered. 
+
+For technical support or other information about Altera products, 
+go to the Altera world-wide web site at www.altera.com. You can also contact 
+Altera through your local sales representative or any of the following sources:
+
+
+Technical Support:              www.altera.com/mysupport		
+                                800 800-EPLD (3753)(USA & Canada)
+                                7:00 a.m. to 5:00 p.m. Pacific Time
+                                +1 408-544-8767 (Internationally)
+                                7:00 a.m. to 5:00 p.m. (GMT -8:00) Pacific Time
+Product literature:             www.altera.com
+Altera literature services:     lit_req@altera.com
+Non-technical customer service: 800-767-3753 (USA & Canada)
+                                7:00 a.m. to 5:00 p.m. Pacific Time
+                                + 1 408-544-7000 (Internationally)
+                                7:00 a.m. to 5:00 p.m. (GMT -8:00) Pacific Time
+FTP site:                       ftp.altera.com
+
+Last updated November 2004
+Copyright (C) 2004 Altera Corporation. All rights reserved.
+
+
+
+
+

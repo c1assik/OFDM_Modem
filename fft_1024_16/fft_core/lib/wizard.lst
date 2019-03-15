@@ -1,0 +1,6 @@
+[DSP|Transforms] 
+FFT v2.1.3 = "C:\EDA\MegaCore\fft-v2.1.3\lib\..\..\common\ip_toolbench\v1.2.7\bin\ip_toolbench.exe" %f %o %h "-lib_dir:C:\EDA\MegaCore\fft-v2.1.3\lib\" "-flow_dir:C:\EDA\MegaCore\fft-v2.1.3\lib\..\..\common\ip_toolbench\v1.2.7\bin" -wizard:fft
+<INFO>
+<ACCEPT_OTHER_CNX VALUE="ON"/>
+</INFO>
+
