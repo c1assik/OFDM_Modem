@@ -11,11 +11,12 @@
 
 module top_OFDM(
 	input clk, en, rst, ready_in,
-	output signed [15:0] I_OFDM, Q_OFDM,
-	output valid_OFDM,sop
+	output signed [15:0] real_out, imag_out,
+	output valid_OFDM,sop_out
 );
 
-wire signed [15:0] s1, s2;
+wire signed [15:0] s1, s2, data_real, data_imag;
+wire sop
 
 wire ready_in3, valid_qam, valid_pilot;
 wire index_pilot, sign_pilot, ready_out_pilots;
@@ -33,11 +34,35 @@ wire index_pilot, sign_pilot, ready_out_pilots;
 														 .sign_pilot(sign_pilot),							 
 														 .ready_out_ROM(ready_in3),
 														 .ready_out_pilots(ready_out_pilots),
-														 .i_OFDM(I_OFDM),
-														 .q_OFDM(Q_OFDM),
+														 .i_OFDM(data_real),
+														 .q_OFDM(data_imag),
 														 .valid_OFDM(valid_OFDM),
 														 .sop(sop)
 														);
+
+
+
+	fft_1024_16 fft_submod 							    (
+														.clk(clk),
+														.reset			(reset),
+														.master_sink_dav		(),
+														.master_sink_sop		(sop),
+														.master_source_dav	(),
+														.inv_i				(1'b1),
+														.data_real_in		(data_real),
+														.data_imag_in		(data_imag),
+														.fft_real_out		(real_out),
+														.fft_imag_out		(imag_out),
+														.exponent_out		(),
+														.master_sink_ena		(),
+														.master_source_sop	(sop_out),
+														.master_source_eop	(),
+														.master_source_ena	()   
+													   );
+
+
+
+
 
 	pilots pilots1					                 	(	
 														 .clk(clk),													    
