@@ -4,14 +4,15 @@ parameter tck = 10; ///< clock tick
 
 reg clk, en, rst;
 wire signed [19:0] out_i, out_q;
+wire sop_out;
 
-CP_top top_inst(clk, en, rst, out_i, out_q);
+CP_top top_inst(clk, en, rst, out_i, out_q,sop_out);
  
 initial 
 begin
 	$dumpfile("CP_top.vcd");
 	$dumpvars(0, CP_top_tb);
-	$monitor("%b", clk, en, rst, out_i, out_q);
+	$monitor("%b", clk, en, rst, out_i, out_q,sop_out);
 end
 
 initial

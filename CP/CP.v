@@ -2,7 +2,8 @@ module CP
 (
 input clk, en, rst, in_sop,
 input signed [19:0] in_i, in_q,
-output signed [19:0] out_i, out_q
+output signed [19:0] out_i, out_q,
+output reg sop_out
 );
 
 reg [9:0] w_count;
@@ -19,6 +20,7 @@ begin
 	r_count = 0;
 	s_trigger = 0;
 	CP_beg = 0;
+	sop_out = 0;
 end
 
 
@@ -35,9 +37,16 @@ always @ (posedge clk or posedge rst)
 				r_count <= 10'd0;
 		else if ((CP_beg) && (w_count != 10'd992))
 			r_count <= (r_count == 10'd1023) ? 0 : r_count + 1'd1;
-		else if (w_count == 10'd992)
-			r_count <= 10'd992;																													 
+		else if (w_count == 10'd992) r_count <= 10'd992;																										 
 	end
+
+always @ (posedge clk or posedge rst)
+	begin
+		if (rst)
+				sop_out <= 0;
+		else  if (w_count == 10'd993) sop_out <= 1; else sop_out <= 0; 																									 
+	end
+
 
 always @ (posedge clk or posedge rst)
 	begin

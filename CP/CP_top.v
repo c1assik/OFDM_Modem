@@ -1,7 +1,8 @@
 module CP_top
 (
 input clk, en, rst,
-output signed [19:0] out_i, out_q
+output signed [19:0] out_i, out_q,
+output sop_out
 );
 wire s;
 wire signed [19:0] i, q;
@@ -23,7 +24,8 @@ CP c2(
 		.in_i(i), 
 		.in_q(q),
 		.out_i(out_i), 
-		.out_q(out_q)
+		.out_q(out_q),
+		.sop_out(sop_out)
 	);
 
 endmodule
