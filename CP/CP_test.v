@@ -2,7 +2,7 @@ module CP_test
 (
 input clk, en, rst,
 output reg sop,
-output reg signed [19:0] i, q
+output reg signed [15:0] i, q
 );
 
 reg [23:0] n;

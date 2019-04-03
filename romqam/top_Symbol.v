@@ -15,7 +15,7 @@ module top_Symbol
 );
 
 wire [1:0] data_rom1;
-wire valid_rom1, ready_out1;
+wire valid_rom1;
    	
 build_rom build_rom1            					
 														(

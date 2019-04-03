@@ -3,7 +3,7 @@ module CP_top_tb;
 parameter tck = 10; ///< clock tick
 
 reg clk, en, rst;
-wire signed [19:0] out_i, out_q;
+wire signed [13:0] out_i, out_q;
 wire sop_out;
 
 CP_top top_inst(clk, en, rst, out_i, out_q,sop_out);

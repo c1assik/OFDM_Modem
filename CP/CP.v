@@ -1,8 +1,8 @@
 module CP
 (
 input clk, en, rst, in_sop,
-input signed [19:0] in_i, in_q,
-output signed [19:0] out_i, out_q,
+input signed [15:0] in_i, in_q,
+output signed [15:0] out_i, out_q,
 output reg sop_out
 );
 
@@ -11,8 +11,8 @@ reg [9:0] r_count;
 reg s_trigger;
 reg CP_beg;
 
-reg [39:0] r_data;
-reg [39:0] ram [0:1023];
+reg [31:0] r_data;
+reg [31:0] ram [0:1023];
 
 initial
 begin
@@ -71,7 +71,7 @@ always @ (posedge clk) begin
 	 r_data <= ram[r_count];
 end
 
-assign out_q = r_data[19:0];
-assign out_i = r_data[39:20];
+assign out_q = r_data[15:0];
+assign out_i = r_data[31:16];
 
 endmodule
