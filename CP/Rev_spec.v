@@ -1,8 +1,8 @@
 module Rev_spec
 (
 	input clk, en, rst, in_sop,
-	input signed [19:0] in_i, in_q,
-	output reg signed [19:0] out_i, out_q,
+	input signed [15:0] in_i, in_q,
+	output reg signed [15:0] out_i, out_q,
 	output reg sop_out
 );
 

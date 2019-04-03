@@ -8,22 +8,14 @@
 // Editor : sublime text3, tab size (4)
 // -----------------------------------------------------------------------------
 module ROM
-#(
-	parameter DATA_WIDTH =2,
-	parameter ADDR_WIDTH=11
-)
 (
-
 	input clk, en, rst,
-	input [ADDR_WIDTH-1:0] addr,
-	input valid_addr,
+	input [10:0] addr,
 	output reg [1:0] data_rom,
 	output reg valid_rom
 );
 
-
-reg [DATA_WIDTH-1:0] rom [2**ADDR_WIDTH-1:0];
-//reg [(DATA_WIDTH-1):0] idata;// idata register
+reg [1:0] rom [1023:0];
 
 initial
 begin
@@ -39,7 +31,7 @@ begin
 		data_rom   <= 0;
 		valid_rom  <= 0;
 	end
-	else if (en && valid_addr) 	
+	else if (en) 	
 			begin
 				valid_rom  <= 1'b1;
 		    	data_rom[1:0] <= rom[addr];

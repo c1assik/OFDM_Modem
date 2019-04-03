@@ -10,12 +10,20 @@
 module counter_rom
 (   
 	input clk, en, rst, ready_in,
-	output reg [9:0] addr
+	output reg [9:0] addr,
+	output reg valid_addr
 );
   
 initial
 begin
 	addr = 0;
+	valid_addr = 0;
+end
+
+always @(clk or rst) 
+begin
+   	if (rst) valid_addr <= 0;
+   	else valid_addr <= (en && ready_in) ? 1'b1 : 1'b0;
 end
 
 always @(posedge clk or posedge rst) 
