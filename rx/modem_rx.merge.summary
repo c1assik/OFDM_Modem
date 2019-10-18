@@ -1,0 +1,17 @@
+Partition Merge Status : Successful - Tue Jun 11 16:06:23 2019
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+Revision Name : modem_rx
+Top-level Entity Name : modem_rx
+Family : Cyclone V
+Logic utilization (in ALMs) : 27,455 / 41,910 ( 66 % )
+Total registers : 40326
+Total pins : 20 / 499 ( 4 % )
+Total virtual pins : 34
+Total block memory bits : 3,108,081 / 5,662,720 ( 55 % )
+Total DSP Blocks : 120 / 112 ( 107 % )
+Total HSSI RX PCSs : 0 / 9 ( 0 % )
+Total HSSI PMA RX Deserializers : 0 / 9 ( 0 % )
+Total HSSI TX PCSs : 0 / 9 ( 0 % )
+Total HSSI PMA TX Serializers : 0 / 9 ( 0 % )
+Total PLLs : 1 / 15 ( 7 % )
+Total DLLs : 0 / 4 ( 0 % )

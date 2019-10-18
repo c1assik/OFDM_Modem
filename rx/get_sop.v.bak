@@ -1,0 +1,26 @@
+module get_sop(
+
+input clk, rst, sop,
+output reg new_sop
+);
+
+
+
+reg [10:0] count_sop;
+
+always@(posedge clk or posedge rst)
+begin
+if (rst) count_sop = 0;
+ else begin
+  count_sop <= (sop) ? 0 : count_sop + 1'b1;
+end
+
+always@(posedge clk or posedge rst)
+begin
+if (rst) new_sop = 0;
+ else if (count_sop = 11'1056)
+   new_sop <= 1'b1;
+	else new_sop =0;
+end
+
+endmodule

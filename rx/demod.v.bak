@@ -1,0 +1,45 @@
+module demod(
+
+input clk, rst, sop,
+input signed [15:0] i_data,q_data,
+output reg signed [1:0] data
+);
+
+reg [1:0] index[1055:0];
+reg [10:0] count;
+
+initial
+begin
+	$readmemb("index.txt", index);
+	data = 0;
+	count = 0;
+end
+
+always @(posedge clk or posedge rst)
+begin
+if (rst)	
+	begin
+		count <= 1'b0;
+	end
+	else if (sop) 
+		begin
+			count <= 1'b1;
+		end
+			else if (count < 11'd1024) count <= count + 1'b1; 
+					else count <= 11'd1025; 
+end	
+
+always @(posedge clk or posedge rst)
+begin
+if (rst)	
+	begin
+		data <= 1'b0;
+	end
+	else if (index[count] = 2'b10)
+			begin
+			if (i_data > 0) data[1] <= 0; else data[1] <= 1;
+ 			if (q_data > 0) data[0] <= 0; else data[0] <= 1;
+			end else data <= 2'd0;		 
+end	
+
+endmodule

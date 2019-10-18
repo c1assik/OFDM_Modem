@@ -1,0 +1,29 @@
+module modem_rx(
+
+input clk,rst
+
+input signed [13:0] DAC_A,
+
+output DAC_CLK_A,DAC_CLK_B, DAC_WRT,DAC_mode
+
+);
+
+
+
+wire clk_40,clk_10;
+
+assign DAC_mode = 1;
+assign DAC_WRT = clk_40;
+assign DAC_CLK_A = clk_40;
+assign DAC_CLK_B = clk_40;
+
+
+
+	pll pll1 										(
+														 .refclk(clk),
+														 .rst(rst),
+														 .outclk_0(clk_10),
+														 .outclk_1(clk_40)
+														 );
+
+endmodule

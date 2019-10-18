@@ -1,0 +1,23 @@
+module Norm(
+
+input clk,rst,
+input signed [13:0] i_data,q_data,
+output reg signed [15:0] Norm_I,Norm_Q
+
+);
+
+
+always@(posedge clk or posedge rst) 
+begin
+if(rst) begin
+ Norm_I<=0;
+ Norm_I<=0;
+end
+
+ Norm_I[15:3] <= i_data;
+ Norm_Q[15:3] <= q_data;
+
+end
+
+
+endmodule

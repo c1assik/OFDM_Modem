@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at korr.v(11): object "ABS" differs only in case from object "abs" in the same scope File: C:/Users/hikli/Desktop/modem_rx/korr/korr.v Line: 11
+Warning (10268): Verilog HDL information at get_sop.v(21): always construct contains both blocking and non-blocking assignments File: C:/Users/hikli/Desktop/modem_rx/get_sop.v Line: 21

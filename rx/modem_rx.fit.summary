@@ -1,0 +1,20 @@
+Fitter Status : Successful - Fri Aug 30 15:24:31 2019
+Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Revision Name : modem_rx
+Top-level Entity Name : modem_rx
+Family : Cyclone V
+Device : 5CSXFC6D6F31C8
+Timing Models : Final
+Logic utilization (in ALMs) : 13,606 / 41,910 ( 32 % )
+Total registers : 25694
+Total pins : 22 / 499 ( 4 % )
+Total virtual pins : 32
+Total block memory bits : 4,419,521 / 5,662,720 ( 78 % )
+Total RAM Blocks : 550 / 553 ( 99 % )
+Total DSP Blocks : 112 / 112 ( 100 % )
+Total HSSI RX PCSs : 0 / 9 ( 0 % )
+Total HSSI PMA RX Deserializers : 0 / 9 ( 0 % )
+Total HSSI TX PCSs : 0 / 9 ( 0 % )
+Total HSSI PMA TX Serializers : 0 / 9 ( 0 % )
+Total PLLs : 1 / 15 ( 7 % )
+Total DLLs : 0 / 4 ( 0 % )

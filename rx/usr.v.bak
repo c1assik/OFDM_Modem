@@ -1,0 +1,45 @@
+module usr
+(
+ input clk, rst,
+ input signed [13:0] data_in_I, data_in_Q,
+ 
+ output signed [13:0] data_out_I, data_out_Q
+);
+
+
+reg signed [13:0]  I [3:0];
+reg signed [13:0]  Q [3:0];
+reg count [1:0];
+reg signed [14:0] s1_I, s1_Q, s2_I, s2_Q;
+reg signed [15:0] sum_I, sum_Q;
+
+
+
+initial
+begin
+   count = 0;
+end
+
+always @(posedge clk or posedge rst)
+begin
+	if(rst) count <= 0; else if (count == 2'b11) count <= 0; else count <= count + 1;
+end
+
+always @(posedge clk)
+begin
+		I[count] <= data_in_I;
+		Q[count] <= data_in_Q;
+		if (count == 0) begin
+		s1_I <= I[0] + I[1];
+		s2_I <= I[2] + I[3];
+		s1_Q <= Q[0] + Q[1];
+		s2_Q <= Q[2] + Q[3];
+		sum_I <= s1_I + s2_I;
+		sum_Q <= s1_Q + s2_Q
+		end
+end
+
+assign data_out_I = sum_I[15:2];
+assign data_out_Q = sum_Q[15:2];
+
+endmodule

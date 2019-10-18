@@ -1,0 +1,103 @@
+Assembler report for modem_rx
+Fri Aug 30 15:25:06 2019
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Assembler Summary
+  3. Assembler Settings
+  4. Assembler Encrypted IP Cores Summary
+  5. Assembler Generated Files
+  6. Assembler Device Options: C:/Users/hikli/Desktop/modem_rx/modem_rx.sof
+  7. Assembler Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2016  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++---------------------------------------------------------------+
+; Assembler Summary                                             ;
++-----------------------+---------------------------------------+
+; Assembler Status      ; Successful - Fri Aug 30 15:25:06 2019 ;
+; Revision Name         ; modem_rx                              ;
+; Top-level Entity Name ; modem_rx                              ;
+; Family                ; Cyclone V                             ;
+; Device                ; 5CSXFC6D6F31C8                        ;
++-----------------------+---------------------------------------+
+
+
++----------------------------------+
+; Assembler Settings               ;
++--------+---------+---------------+
+; Option ; Setting ; Default Value ;
++--------+---------+---------------+
+
+
++------------------------------------------------+
+; Assembler Encrypted IP Cores Summary           ;
++--------+------------------------+--------------+
+; Vendor ; IP Core Name           ; License Type ;
++--------+------------------------+--------------+
+; Altera ; Signal Tap (6AF7 BCE1) ; Licensed     ;
+; Altera ; Signal Tap (6AF7 BCEC) ; Licensed     ;
++--------+------------------------+--------------+
+
+
++----------------------------------------------+
+; Assembler Generated Files                    ;
++----------------------------------------------+
+; File Name                                    ;
++----------------------------------------------+
+; C:/Users/hikli/Desktop/modem_rx/modem_rx.sof ;
++----------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/hikli/Desktop/modem_rx/modem_rx.sof ;
++----------------+-------------------------------------------------------+
+; Option         ; Setting                                               ;
++----------------+-------------------------------------------------------+
+; Device         ; 5CSXFC6D6F31C8                                        ;
+; JTAG usercode  ; 0x0D91B10D                                            ;
+; Checksum       ; 0x0D91B10D                                            ;
++----------------+-------------------------------------------------------+
+
+
++--------------------+
+; Assembler Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Assembler
+    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+    Info: Processing started: Fri Aug 30 15:24:43 2019
+Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off modem_rx -c modem_rx
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (115030): Assembler is generating device programming files
+Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 5221 megabytes
+    Info: Processing ended: Fri Aug 30 15:25:07 2019
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:24
+
+

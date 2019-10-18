@@ -1,0 +1,54 @@
+module comp_div(
+
+input clk, rst,
+input signed [31:0] i_data,q_data,
+input signed [31:0] mid_ocenka_i, mid_ocenka_q,
+
+output signed [63:0] eq_I, eq_Q
+
+
+);
+
+reg signed [63:0] Real, Imag;
+reg signed [63:0] Denom;
+
+always@(posedge clk or posedge rst)
+begin
+ if (rst) begin
+  Real<= 0;
+  Imag<= 0;
+ end else begin
+	Real <= i_data * mid_ocenka_i + q_data * mid_ocenka_q;
+	Imag <= q_data * mid_ocenka_i - i_data * mid_ocenka_q;
+ end
+end
+
+
+
+always@(posedge clk or posedge rst)
+begin
+ if (rst) begin
+  Denom<= 0;
+ end else begin
+	Denom <= mid_ocenka_i * mid_ocenka_i + mid_ocenka_q * mid_ocenka_q;
+ end
+end
+
+
+
+
+	div65 div1 										(
+															.clock(clk),
+															.denom(Denom),
+															.numer(Real),
+															.quotient(eq_I)
+														 );
+														 
+	div65 div2										(
+															.clock(clk),
+															.denom(Denom),
+															.numer(Imag),
+															.quotient(eq_Q)
+														 );
+														 
+endmodule														 
